@@ -118,7 +118,7 @@ const updateRedirect = async () => {
       bonusAnimation.value = 'bonus-blink'
     }, 1000)
 
-    const { status } = await useFetch('http://localhost:8000/api/user-achievement', {
+    const { status } = await useFetch('http://52.185.190.68:8000/api/user-achievement', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + token.value,
@@ -155,7 +155,7 @@ const cowStyle = reactive({
   width: '5%',
   height: 'auto',
   transform: 'translate(-50%, -50%)'
-  // opacity: '0'
+  //   opacity: '0'
 })
 
 // Book style
@@ -277,7 +277,7 @@ onMounted(async () => {
   })
 
   // Get the answer
-  const { data, status, error } = await useFetch('http://localhost:8000/api/book/answer', {
+  const { data, status, error } = await useFetch('http://52.185.190.68:8000/api/book/answer', {
     method: 'GET',
     headers: {
       Authorization: 'Bearer ' + token.value,
@@ -293,7 +293,7 @@ onMounted(async () => {
 
   // Refresh token
   //   const { data: data2, status: status2 } = await useFetch(
-  //     'http://localhost:8000/api/auth/refresh',
+  //     'http://52.185.190.68:8000/api/auth/refresh',
   //     {
   //       method: 'GET',
   //       headers: {
@@ -378,7 +378,7 @@ const handleClick = async () => {
   }
 
   // Send the time to the backend
-  const { status } = await useFetch('http://localhost:8000/api/challenge-record', {
+  const { status } = await useFetch('http://52.185.190.68:8000/api/challenge-record', {
     method: 'POST',
     headers: {
       Authorization: 'Bearer ' + token.value,
